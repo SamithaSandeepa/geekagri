@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geek Agriculture - Coming Soon</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: "Poppins", sans-serif;
+        color: #ffffff;
+        background-color: #000000;
+        overflow-x: hidden;
+      }
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 50px;
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.8),
+          rgba(0, 0, 0, 0)
+        );
+        z-index: 1000;
+        transition: all 0.3s ease;
+      }
+      .header:hover {
+        background: rgba(0, 0, 0, 0.9);
+      }
+      .logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .logo img {
+        height: 50px;
+      }
+      .logo-text-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .logo-text {
+        font-size: 1.5em;
+        font-weight: 600;
+        color: #4caf50;
+        line-height: 1.2;
+      }
+      .logo-tagline {
+        font-size: 0.9em;
+        color: #ffffff;
+        font-weight: 300;
+      }
+      .countdown {
+        font-size: 1.2em;
+        font-weight: 600;
+        color: #4caf50;
+        background: rgba(76, 175, 80, 0.2);
+        padding: 10px 20px;
+        border-radius: 25px;
+        border: 2px solid #4caf50;
+        transition: all 0.3s ease;
+      }
+      .countdown:hover {
+        background: rgba(76, 175, 80, 0.3);
+        transform: scale(1.05);
+      }
+      .hero {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url("images/img.jpg") no-repeat center center;
+        background-size: cover;
+        position: relative;
+      }
+      .hero-content {
+        position: relative;
+        z-index: 1;
+      }
+      h1 {
+        font-size: 4em;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        animation: glow 2s ease-in-out infinite alternate;
+      }
+      @keyframes glow {
+        from {
+          text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #4caf50,
+            0 0 20px #4caf50;
+        }
+        to {
+          text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #4caf50,
+            0 0 40px #4caf50;
+        }
+      }
+      .tagline {
+        font-size: 1.8em;
+        margin-bottom: 40px;
+        font-weight: 300;
+      }
+      .services {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+      }
+      .service-item {
+        background-color: rgba(76, 175, 80, 0.2);
+        margin: 10px;
+        padding: 15px 25px;
+        border-radius: 30px;
+        font-size: 1.2em;
+        transition: all 0.3s ease;
+        border: 2px solid #4caf50;
+      }
+      .service-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+        background-color: rgba(76, 175, 80, 0.3);
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate {
+        animation: fadeInUp 0.8s ease-out forwards;
+      }
+      .contact-info {
+        margin-left: 20px;
+        font-size: 1em;
+        color: #ffffff;
+      }
+
+      .email-address {
+        display: inline-block;
+        padding: 5px 10px;
+        background: rgba(76, 175, 80, 0.2);
+        border-radius: 15px;
+        transition: all 0.3s ease;
+      }
+
+      .email-address:hover {
+        background: rgba(76, 175, 80, 0.3);
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img src="images/logo.png" alt="Geek Agriculture Logo" />
+        <span class="logo-tagline">Technologies for Farming</span>
+      </div>
+      <div class="countdown" id="countdown"></div>
+      <div class="contact-info">
+        <span class="email-address">✉️ geekagriculture@gmail.com</span>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="animate">Coming Soon</h1>
+        <p class="tagline animate">The Future of Agriculture is Here</p>
+        <div class="services">
+          <div class="service-item animate">Specialized Expertise</div>
+          <div class="service-item animate">Adaptive Solutions</div>
+          <div class="service-item animate">Holistic Approaches</div>
+          <div class="service-item animate">Consulting Services</div>
+        </div>
+        <p class="tagline animate">Optimizing Resources & Maximizing Yields</p>
+      </div>
+    </section>
+
+    <script>
+      var countDownDate = new Date("Sep 31, 2024 00:00:00").getTime();
+
+      var x = setInterval(function () {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown").innerHTML =
+          days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("countdown").innerHTML = "LAUNCHED";
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>
